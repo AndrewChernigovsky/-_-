@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Путешествие по Европе</title>
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
   <header class="main-header">
     <div class="container">
       <div class="logo">
-        <svg role="img" class="logo" width="57" height="22" aria-label="logotype-vkontakte">
-          <use xlink:href="image/sprite.svg#logo"></use>
-        </svg>
+        <a class="logo-link" href="index.html">
+          <svg role="img" class="logo" width="57" height="22" aria-label="logotype" alt="логотип">
+            <use xlink:href="image/sprite.svg#logo"></use>
+          </svg>
+        </a>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
@@ -41,14 +43,60 @@
       <h2>Места посещения</h2>
       <div class="places">
         <div class="place">
-          <picture>
-            <source>
-          </picture>
+          <a href="#aboutTours">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/grecia.webp 1x, image/content/grecia@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="image/content/grecia-tb.webp 1x, image/content/grecia-tb@2x.webp 2x">
+              <img class="place__image" src="image/content/grecia.jpg" alt="Греция" loading="lazy">
+            </picture>
+          </a>
+          <a href="">смотреть подробнее</a>
+          <span>Греция</span>
         </div>
-        <div class="place"></div>
-        <div class="place"></div>
-        <div class="place"></div>
-        <div class="place"></div>
+        <div class="place">
+          <a href="#aboutTours">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/albania.webp 1x, image/content/albania@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="image/content/albania-tb.webp 1x, image/content/albania-tb@2x.webp 2x">
+              <img class="place__image" src="image/content/albania.jpg" alt="Греция" loading="lazy">
+            </picture>
+          </a>
+          <a href="">смотреть подробнее</a>
+          <span>Албания</span>
+        </div>
+        <div class="place">
+          <a href="#aboutTours">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/makedonia.webp 1x, image/content/makedonia@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="image/content/makedonia-tb.webp 1x, image/content/makedonia-tb@2x.webp 2x">
+              <img class="place__image" src="image/content/makedonia.jpg" alt="Греция" loading="lazy">
+            </picture>
+          </a>
+          <a href="">смотреть подробнее</a>
+          <span>Македония</span>
+        </div>
+        <div class="place">
+          <a href="#aboutTours">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/chernogoria.webp 1x, image/content/chernogoria@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="image/content/chernogoria-tb.webp 1x, image/content/chernogoria-tb@2x.webp 2x">
+              <img class="place__image" src="image/content/chernogoria.jpg" alt="Греция" loading="lazy">
+            </picture>
+          </a>
+          <a href="">смотреть подробнее</a>
+          <span>Черногория</span>
+        </div>
+        <div class="place">
+          <a href="#aboutTours">
+            <picture>
+              <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/horvatia.webp 1x, image/content/horvatia@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="image/content/horvatia-tb.webp 1x, image/content/horvatia-tb@2x.webp 2x">
+              <img class="place__image" src="image/content/horvatia.jpg" alt="Греция" loading="lazy">
+            </picture>
+          </a>
+          <a href="">смотреть подробнее</a>
+          <span>Хорватия</span>
+        </div>
       </div>
     </section>
   </main>
