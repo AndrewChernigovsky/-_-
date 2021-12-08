@@ -11,9 +11,11 @@
   <header class="main-header">
     <div class="container">
       <div class="logo">
-        <svg role="img" class="logo" width="57" height="22" aria-label="logotype-vkontakte">
-          <use xlink:href="image/sprite.svg#logo"></use>
-        </svg>
+        <a class="logo-link" href="index.html">
+          <svg role="img" class="logo" width="57" height="22" aria-label="logotype" alt="логотип">
+            <use xlink:href="image/sprite.svg#logo"></use>
+          </svg>
+        </a>
       </div>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
@@ -42,13 +44,13 @@
       <div class="places">
         <div class="place">
           <picture>
-            <source>
+            <source media="(min-width: 1220px)" srcset="img/logo/albania@2x.webp">
+            <source media="(min-width: 768px)" srcset="image/content/albania-tb@2x.webp">
+            <img class="place__image" src="image/content/albania.jpg" alt="Греция" width="285" height="425">
           </picture>
+
+          
         </div>
-        <div class="place"></div>
-        <div class="place"></div>
-        <div class="place"></div>
-        <div class="place"></div>
       </div>
     </section>
   </main>
