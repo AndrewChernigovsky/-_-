@@ -9,15 +9,23 @@
   display: none;
   opacity: 0;
   position: absolute;
-  width: 100%;
+  width: inherit;
   height: 100%;
+  background-color: $basic-sixa5;
   z-index: 2;
+
+  &:hover {
+    opacity: 1;
+    transition: 0.7s ease-in-out;
+  }
 }
 
 .place {
   position: relative;
   display: flex;
   justify-content: center;
+  height: 430px;
+  margin-bottom: 100px;
 
   &__city{
     position: absolute;
@@ -32,7 +40,6 @@
 
   &:hover .overlay {
     display: block;
-    opacity: 1;
     background-color: $basic-sixa5;
     transition: 0.7s ease-in-out;
   }
@@ -51,7 +58,14 @@
     transition: 0.7s ease-in-out;
   }
 
-  &:nth-last-child(2n){
+  &:nth-last-child(1), &:nth-last-child(2){
     flex-basis: 50%;
+  }
+
+  &__wrapper {
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
