@@ -3,7 +3,6 @@
 .font-secondary {
   font-size: 16px;
   color: $basic-primary;
-  line-height: 32;
 
   @media screen and (min-width: $tb) {
     font-size: 18px;
@@ -17,30 +16,27 @@
 .font-qualities {
   font-size: 16px;
   color: $basic-third;
-  line-height: 24;
 }
 
 .font-qualitiesList {
   font-size: 16px;
   color: $basic-third;
-  line-height: 32;
 }
 
 .font-third {
   font-size: 16px;
   color: $basic-third;
-  line-height: 170%;
 
   @media screen and (min-width: $tb) {
     letter-spacing: -0.47px;
     color: $white;
+    line-height: 2;
   }
 }
 
 .font-seven {
   font-size: 16px;
   color: $basic-thirda7;
-  line-height: 28;
   letter-spacing: -0.47px;
 
   @media screen and (min-width: $tb) {
@@ -52,20 +48,17 @@
 .font-costAbout {
   font-size: 16px;
   color: $basic-thirda7;
-  line-height: 170%;
   letter-spacing: 0;
 }
 
 .font-lastAbout {
   color: $basic-sixa5;
-  line-height: 170%;
   letter-spacing: 0;
 }
 
 .font-content {
   font-size: 16px;
   color: $basic-thirda7;
-  line-height: 28;
   letter-spacing: -0.47px;
 
   @media screen and (min-width: $tb) {
@@ -76,7 +69,6 @@
 
 .font-review{
   color: $basic-thirda7;
-  line-height: 28;
   letter-spacing: -0.41px;
 
   @media screen and (min-width: $ds) {
@@ -86,27 +78,23 @@
 
 .font-lastTitles {
   color: $basic-sixa5;
-  line-height: auto;
   letter-spacing: 0;
 }
 
 .font-contactPhone {
   color: $basic-primary;
-  line-height: auto;
   letter-spacing: 0;
 }
 
 .font-contactEmail {
   font-size: 16px;
   color: $basic-primary;
-  line-height: 32;
   letter-spacing: 0;
 }
 
 .font-callnwrite {
   font-size: 16px;
   color: $basic-six;
-  line-height: 150%;
 }
 
 // Medium
@@ -115,7 +103,6 @@
   font-weight: 500;
   font-size: 16px;
   color: $basic-third;
-  line-height: auto;
   letter-spacing: -0.47px;
 }
 
@@ -123,7 +110,6 @@
   font-weight: 500;
   font-size: 14px;
   color: $white;
-  line-height: auto;
   letter-spacing: 2px;
 }
 
@@ -136,6 +122,7 @@
   @media screen and (min-width: $ds) {
     font-weight: 700;
     font-size: 12px;
+    text-transform: uppercase;
   }
 }
 
@@ -143,7 +130,6 @@
   font-weight: 500;
   font-size: 24px;
   color: $basic-third;
-  line-height: auto;
   letter-spacing: -0.41px;
 }
 
@@ -151,7 +137,6 @@
   font-weight: 500;
   font-size: 20px;
   color: $basic-thirda3;
-  line-height: auto;
   letter-spacing: -0.41px;
 
   @media screen and (min-width: $tb) {
@@ -164,7 +149,6 @@
   font-weight: 500;
   font-size: 20px;
   color: $basic-third;
-  line-height: auto;
   letter-spacing: -0.69px;
 
   @media screen and (min-width: $tb) {
@@ -176,7 +160,6 @@
   font-weight: 500;
   font-size: 18px;
   color: $basic-six;
-  line-height: 34;
   letter-spacing: 0;
 
   @media screen and (min-width: $ds) {
@@ -190,12 +173,10 @@
   font-weight: 600;
   color: $basic-fifth;
   font-size: 20px;
-  line-height: 140%;
 
   @media screen and (min-width: $ds) {
     font-weight: 500;
     font-size: 14px;
-    line-height: auto;
     color: $basic-six;
   }
 }
@@ -204,7 +185,6 @@
   font-weight: 600;
   color: $white;
   font-size: 24px;
-  line-height: 150%;
 
   @media screen and (min-width: $tb) {
     font-size: 30px;
@@ -212,8 +192,8 @@
 
   @media screen and (min-width: $ds) {
     font-size: 55px;
-    line-height: 80;
     letter-spacing: -1.11px;
+    line-height: 1.4;
   }
 }
 
@@ -221,7 +201,6 @@
   font-weight: 600;
   font-size: 24px;
   color: $basic-third;
-  line-height: 150%;
 
   @media screen and (min-width: $tb) {
     font-size: 30px;
@@ -229,7 +208,6 @@
 
   @media screen and (min-width: $ds) {
     font-size: 55px;
-    line-height: 80;
     letter-spacing: -1.25px;
   }
 }
@@ -238,7 +216,6 @@
   font-weight: 600;
   font-size: 24px;
   color: $basic-third;
-  line-height: 150%;
 
   @media screen and (min-width: $tb) {
     font-size: 30px;
@@ -246,7 +223,6 @@
 
   @media screen and (min-width: $ds) {
     font-size: 55px;
-    line-height: 90;
     letter-spacing: -1.25px;
   }
 }
@@ -256,7 +232,6 @@
   font-weight: 600;
   font-size: 24px;
   color: $basic-primary;
-  line-height: 34;
   letter-spacing: 0;
 
   @media screen and (min-width: $ds) {
@@ -268,7 +243,6 @@
   font-weight: 600;
   font-size: 24px;
   color: $basic-sixa7;
-  line-height: 38;
   letter-spacing: -1.27px;
 
   @media screen and (min-width: $ds) {
@@ -284,7 +258,6 @@
   font-weight: 600;
   font-size: 25px;
   color: $basic-six;
-  line-height: 32;
   letter-spacing: 0;
 }
 
@@ -292,7 +265,6 @@
   font-weight: 600;
   font-size: 18px;
   color: $basic-six;
-  line-height: 32;
   letter-spacing: 0;
 }
 
@@ -302,7 +274,6 @@
   font-weight: 700;
   font-size: 25px;
   color: $basic-sixa7;
-  line-height: 34;
   letter-spacing: 0;
 
   @media screen and (min-width: $ds) {

@@ -1,0 +1,19 @@
+.link {
+  background-color: $basic-primary;
+  width: 268px;
+  height: 55px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 40px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $basic-secondary;
+    transition: 0.3s ease-in-out;
+  }
+
+  @media screen and (min-width: $tb) {
+    width: 250px;
+  }
+}

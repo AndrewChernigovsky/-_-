@@ -1,3 +1,50 @@
 .offer-tour {
-  height: 150px;
+  min-width: 100%;
+  min-height: 235px;
+  background-color: $loader-bg;
+  background-image: url('../image/content/main_bg.jpg');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  @media screen and (min-width: $tb) {
+    min-height: 344px;
+  }
+
+  @media screen and (min-width: $ds) {
+    min-height: 860px;
+  }
+
+  &__wrapper{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__link {
+    position: relative;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      top: 31px;
+      right: 40px;
+      background-image: url("../image/icons/arrowDown.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      flex: none;
+    }
+  }
+}
+
+.offer-inner {
+  display: flex;
+  min-width: 300px;
+  max-width: 412px;
+  padding-right: 50px;
+  flex-direction: column;
+  margin-top: 185px;
 }

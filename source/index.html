@@ -14,32 +14,36 @@
 </head>
 <body class="page__body">
   <header class="main-header">
-    <div class="container">
-      <div class="logo">
-        <a class="logo-link" href="index.html">
-          <svg role="img" class="logo" width="57" height="22" aria-label="logotype" alt="логотип">
-            <use xlink:href="image/sprite.svg#logo"></use>
-          </svg>
-        </a>
+    <div class="main-header__wrapper">
+      <div class="main-header__inner container">
+        <div class="logo">
+          <a class="logo-link" href="index.html">
+            <svg role="img" class="logo" width="57" height="22" aria-label="logotype" alt="логотип">
+              <use xlink:href="image/sprite.svg#logo"></use>
+            </svg>
+          </a>
+        </div>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button">
+            <span class="visually-hidden">Открыть меню</span>
+          </button>
+          <ul class="main-nav__list">
+            <li class="main-nav__item font-primary">О путешествии</li>
+            <li class="main-nav__item font-primary">Цены</li>
+          </ul>
+        </nav>
+        <div class="phone-wrapper">
+          <a class="phone-link font-secondary" href="tel:++749978468446">+7 (499) -784-684-46</a>
+        </div>
       </div>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
-        <button class="main-nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-        <ul class="main-nav__list">
-          <li class="main-nav__item font-primary">О путешествии</li>
-          <li class="main-nav__item font-primary">Цены</li>
-        </ul>
-      </nav>
-      <div class="phone-wrapper">
-        <a class="phone-link font-secondary" href="tel:++749978468446">+7 (499) -784-684-46</a>
-      </div>
-    </div>
-    <div class="offer-tour">
-      <div class="offer-inner">
-        <h1 class="main-title font-fifth">Путешествие по Европе</h1>
-        <p class="main-subtitle font-third">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-        <a class="link font-fourfh">смотреть тур</a>
+      <div class="offer-tour">
+        <div class="offer-tour__wrapper container">
+          <div class="offer-inner">
+            <h1 class="main-title font-fifth">Путешествие по Европе</h1>
+            <p class="main-subtitle font-third">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
+            <a class="link offer-tour__link font-fourfh">смотреть тур</a>
+          </div>
+        </div>
       </div>
     </div>
   </header>

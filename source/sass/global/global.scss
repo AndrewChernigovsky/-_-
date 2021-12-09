@@ -1,3 +1,14 @@
+.container {
+  min-width: $mb;
+  max-width: $ds + 146px;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @media screen and (min-width: $tb) {
+    padding: 0 20px;
+  }
+}
+
 img {
   max-width: 100%;
   height: auto;
