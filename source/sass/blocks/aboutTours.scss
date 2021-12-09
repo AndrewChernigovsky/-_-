@@ -3,8 +3,10 @@
 }
 
 .aboutTours {
-  display: flex;
-  justify-content: center;
+  &__content-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__header {
     display: flex;
@@ -17,42 +19,42 @@
   }
 
   &__body {
-    min-height: 30rem;
-    background-color: transparent;
+    background-repeat: no-repeat;
+    background-image: url('../image/content/bg-feedBack.png');
+    width: 100%;
+    height: 500px;
   }
 
-  &__content {
-    display: none;
-    padding: 1rem 0;
-    min-height: 10rem;
-    width: inherit;
-    text-align: center;
+  &__info {
+    width: 30%;
   }
 
-  &__content.active {
-    display: block;
+  &__title {
+    border-bottom: 3px solid $basic-primary;
+    padding-bottom: 10px;
   }
 
-  &__tab {
-    min-width: 20rem;
-    height: max-content;
-    background-color: grey;
+  &__feedback {
+    width: 60%;
+    position: relative;
   }
 
-  &__tab.active {
-    background-color: blanchedalmond;
-    display: block;
-    transition: 0.3s ease-in-out;
-
-    .tabs__link {
-      color: black;
-    }
+  &__review {
+    position: absolute;
+    top: 90px;
+    right: 110px;
+    width: 382px;
+    background-color: $white;
+    padding: 20px;
   }
+}
 
-  &__link {
-    font-size: 2.4rem;
-    color: wheat;
-    background-color: transparent;
-    border: none;
+.userReview {
+  display: flex;
+  align-items: center;
+
+  &__image {
+    border-radius: 50%;
+    margin-right: 10px;
   }
 }
