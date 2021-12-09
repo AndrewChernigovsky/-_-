@@ -1,0 +1,57 @@
+.places {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.overlay {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.place {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &__city{
+    position: absolute;
+    width: 250px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $white;
+    bottom: 0;
+  }
+
+  &:hover .overlay {
+    display: block;
+    opacity: 1;
+    background-color: $basic-sixa5;
+    transition: 0.7s ease-in-out;
+  }
+
+  &:hover .link-about {
+    border: 1px solid $lightWhite;
+    width: 266px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 1;
+    transition: 0.7s ease-in-out;
+  }
+
+  &:nth-last-child(2n){
+    flex-basis: 50%;
+  }
+}
