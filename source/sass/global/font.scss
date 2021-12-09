@@ -140,11 +140,6 @@
   font-size: 20px;
   color: $basic-thirda3;
   letter-spacing: -0.41px;
-
-  @media screen and (min-width: $tb) {
-    letter-spacing: -0.47px;
-    color: $white;
-  }
 }
 
 .font-reviewTitle{
