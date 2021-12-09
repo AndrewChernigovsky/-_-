@@ -14,6 +14,18 @@
   }
 }
 
+.font-qualities {
+  font-size: 16px;
+  color: $basic-third;
+  line-height: 24;
+}
+
+.font-qualitiesList {
+  font-size: 16px;
+  color: $basic-third;
+  line-height: 32;
+}
+
 .font-third {
   font-size: 16px;
   color: $basic-third;
@@ -44,6 +56,11 @@
   letter-spacing: 0;
 }
 
+.font-lastAbout {
+  color: $basic-sixa5;
+  line-height: 170%;
+  letter-spacing: 0;
+}
 
 .font-content {
   font-size: 16px;
@@ -84,6 +101,12 @@
   color: $basic-primary;
   line-height: 32;
   letter-spacing: 0;
+}
+
+.font-callnwrite {
+  font-size: 16px;
+  color: $basic-six;
+  line-height: 150%;
 }
 
 // Medium
@@ -265,7 +288,7 @@
   letter-spacing: 0;
 }
 
-.font-lastTitles {
+.font-lastTitle {
   font-weight: 600;
   font-size: 18px;
   color: $basic-six;
