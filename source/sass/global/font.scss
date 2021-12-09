@@ -25,23 +25,6 @@
   }
 }
 
-
-.font-fifth {
-  color: $white;
-  font-size: 24px;
-  line-height: 150%;
-
-  @media screen and (min-width: $tb) {
-    font-size: 30px;
-  }
-
-  @media screen and (min-width: $ds) {
-    font-size: 55px;
-    line-height: 80;
-    letter-spacing: -1.11px;
-  }
-}
-
 .font-seven {
   font-size: 16px;
   color: $basic-thirda7;
@@ -53,6 +36,14 @@
     color: $white;
   }
 }
+
+.font-costAbout {
+  font-size: 16px;
+  color: $basic-thirda7;
+  line-height: 170%;
+  letter-spacing: 0;
+}
+
 
 .font-content {
   font-size: 16px;
@@ -94,7 +85,24 @@
   line-height: 32;
   letter-spacing: 0;
 }
+
 // Medium
+
+.font-nameAvatar {
+  font-weight: 500;
+  font-size: 16px;
+  color: $basic-third;
+  line-height: auto;
+  letter-spacing: -0.47px;
+}
+
+.font-about {
+  font-weight: 500;
+  font-size: 14px;
+  color: $white;
+  line-height: auto;
+  letter-spacing: 2px;
+}
 
 .font-fourfh {
   font-weight: 500;
@@ -107,7 +115,6 @@
     font-size: 12px;
   }
 }
-
 
 .font-subtitles {
   font-weight: 500;
@@ -151,10 +158,8 @@
 
   @media screen and (min-width: $ds) {
     font-size: 22px;
-    letter-spacing: -0.69px;
   }
 }
-
 
 //SemiBold
 
@@ -172,6 +177,23 @@
   }
 }
 
+.font-fifth {
+  font-weight: 600;
+  color: $white;
+  font-size: 24px;
+  line-height: 150%;
+
+  @media screen and (min-width: $tb) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: $ds) {
+    font-size: 55px;
+    line-height: 80;
+    letter-spacing: -1.11px;
+  }
+}
+
 .font-six {
   font-weight: 600;
   font-size: 24px;
@@ -184,10 +206,28 @@
 
   @media screen and (min-width: $ds) {
     font-size: 55px;
-    line-height: 80%;
+    line-height: 80;
     letter-spacing: -1.25px;
   }
 }
+
+.font-sixth {
+  font-weight: 600;
+  font-size: 24px;
+  color: $basic-third;
+  line-height: 150%;
+
+  @media screen and (min-width: $tb) {
+    font-size: 30px;
+  }
+
+  @media screen and (min-width: $ds) {
+    font-size: 55px;
+    line-height: 90;
+    letter-spacing: -1.25px;
+  }
+}
+
 
 .font-offer-day{
   font-weight: 600;
@@ -213,6 +253,10 @@
   }
 }
 
+.font-offer.js-offer-active{
+  color: $basic-primary;
+}
+
 .font-feedBack {
   font-weight: 600;
   font-size: 25px;
@@ -227,4 +271,22 @@
   color: $basic-six;
   line-height: 32;
   letter-spacing: 0;
+}
+
+// Bold
+
+.font-offerCost {
+  font-weight: 700;
+  font-size: 25px;
+  color: $basic-sixa7;
+  line-height: 34;
+  letter-spacing: 0;
+
+  @media screen and (min-width: $ds) {
+    font-size: 28px;
+  }
+}
+
+.font-offerCost.js-offer-active{
+  color: $basic-primary;
 }
