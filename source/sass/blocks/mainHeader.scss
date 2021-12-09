@@ -1,0 +1,27 @@
+.main-header {
+  position: relative;
+  background-color: $white;
+
+  &__wrapper {
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    background-color: $white;
+  }
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+  }
+}
