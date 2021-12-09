@@ -52,6 +52,7 @@
       <h2 class="font-six">Места посещения</h2>
       <div class="places">
         <div class="place">
+          <div class="overlay"></div>
           <a href="#aboutTours">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/grecia.webp 1x, image/content/grecia@2x.webp 2x">
@@ -59,10 +60,11 @@
               <img class="place__image" src="image/content/grecia.jpg" alt="Греция" loading="lazy">
             </picture>
           </a>
-          <a class="link font-about" href="">смотреть подробнее</a>
-          <span class="font-subtitles">Греция</span>
+          <a class="link-about font-about" href="">смотреть подробнее</a>
+          <span class="place__city font-subtitles">Греция</span>
         </div>
         <div class="place">
+          <div class="overlay"></div>
           <a href="#aboutTours">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/albania.webp 1x, image/content/albania@2x.webp 2x">
@@ -70,10 +72,11 @@
               <img class="place__image" src="image/content/albania.jpg" alt="Греция" loading="lazy">
             </picture>
           </a>
-          <a class="link font-about" href="">смотреть подробнее</a>
-          <span class="font-subtitles">Албания</span>
+          <a class="link-about font-about" href="">смотреть подробнее</a>
+          <span class="place__city font-subtitles">Албания</span>
         </div>
         <div class="place">
+          <div class="overlay"></div>
           <a href="#aboutTours">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/makedonia.webp 1x, image/content/makedonia@2x.webp 2x">
@@ -81,10 +84,11 @@
               <img class="place__image" src="image/content/makedonia.jpg" alt="Греция" loading="lazy">
             </picture>
           </a>
-          <a class="link font-about" href="">смотреть подробнее</a>
-          <span class="font-subtitles">Македония</span>
+          <a class="link-about font-about" href="">смотреть подробнее</a>
+          <span class="place__city font-subtitles">Македония</span>
         </div>
         <div class="place">
+          <div class="overlay"></div>
           <a href="#aboutTours">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/chernogoria.webp 1x, image/content/chernogoria@2x.webp 2x">
@@ -92,10 +96,11 @@
               <img class="place__image" src="image/content/chernogoria.jpg" alt="Греция" loading="lazy">
             </picture>
           </a>
-          <a class="link font-about" href="">смотреть подробнее</a>
-          <span class="font-subtitles">Черногория</span>
+          <a class="link-about font-about" href="">смотреть подробнее</a>
+          <span class="place__city font-subtitles">Черногория</span>
         </div>
         <div class="place">
+          <div class="overlay"></div>
           <a href="#aboutTours">
             <picture>
               <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/horvatia.webp 1x, image/content/horvatia@2x.webp 2x">
@@ -103,8 +108,8 @@
               <img class="place__image" src="image/content/horvatia.jpg" alt="Греция" loading="lazy">
             </picture>
           </a>
-          <a class="link font-about" href="">смотреть подробнее</a>
-          <span class="font-subtitles">Хорватия</span>
+          <a class="link-about font-about" href="">смотреть подробнее</a>
+          <span class="place__city font-subtitles">Хорватия</span>
         </div>
       </div>
     </section>
@@ -128,7 +133,7 @@
             <a class="link aboutTours__link font-tabs">Хорватия</a>
           </li>
         </ul>
-        <div class="aboutTours__body">
+        <div class="aboutTours__body" id="aboutTours">
           <div class="aboutTours__content js-aboutTours-body active" data-tab="1">
             <div class="aboutTours__content-wrapper">
               <div class="aboutTours__info">

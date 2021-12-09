@@ -17,3 +17,26 @@
     width: 250px;
   }
 }
+
+.link-about {
+  display: none;
+  position: absolute;
+  bottom: 200px;
+  width: 266px;
+  opacity: 0;
+  background-color: transparent;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  z-index: 3;
+  border: 1px solid $lightWhite;
+  width: 266px;
+  height: 55px;
+
+  &:hover {
+    background-color: $basic-secondary;
+    transition: 0.3s ease-in-out;
+  }
+}
