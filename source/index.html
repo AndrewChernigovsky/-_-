@@ -24,17 +24,23 @@
           </a>
         </div>
         <nav class="main-nav main-nav--closed main-nav--nojs">
-          <button class="main-nav__toggle" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item font-primary">О путешествии</li>
-            <li class="main-nav__item font-primary">Цены</li>
-          </ul>
+          <div class="main-nav__wrapper">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link font-primary" href="#no__scroll">О путешествии</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link font-primary" href="#no__scroll">Цены</a>
+              </li>
+            </ul>
+            <div class="phone-wrapper">
+              <a class="phone-link font-secondary" href="tel:++749978468446">+7 (499) -784-684-46</a>
+            </div>
+          </div>
         </nav>
-        <div class="phone-wrapper">
-          <a class="phone-link font-secondary" href="tel:++749978468446">+7 (499) -784-684-46</a>
-        </div>
       </div>
       <div class="offer-tour">
         <div class="offer-tour__wrapper container">
@@ -423,6 +429,7 @@
       </div>
     </footer>
   </main>
+  <script src="js/menu.js"></script>
   <script src="js/tabs.js"></script>
 </body>
 </html>
