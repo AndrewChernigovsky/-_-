@@ -1,0 +1,30 @@
+.main-footer {
+  margin-bottom: 100px;
+
+  &__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    min-height: 200px;
+  }
+
+  &__tour,&__contacts,&__aboutTour {
+    padding: 20px;
+    border-left: 1px solid $basic-seven;
+    padding-left: 50px;
+    min-height: inherit;
+  }
+
+  &__tour-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+  }
+
+  &__tour-item {
+  }
+
+  &__text {
+    line-height: 1.5;
+  }
+}

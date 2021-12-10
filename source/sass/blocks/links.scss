@@ -54,11 +54,44 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  color: $basic-six;
 
   svg {
     fill: $white;
     stroke: $black;
     transform: rotate(-15deg);
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    color: $basic-primary;
+    text-decoration: underline;
+
+    svg {
+      stroke: $basic-primary;
+    }
+  }
+}
+
+.link-city {
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.5;
+
+  &:hover {
+    color: $basic-primary;
+  }
+}
+
+.phone-footer {
+  line-height: 2;
+
+  svg {
+    fill: $white;
+    stroke: $basic-seven;
+    transform: rotate(0deg);
     margin-right: 10px;
     width: 18px;
     height: 18px;
