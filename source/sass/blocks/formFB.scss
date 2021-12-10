@@ -1,0 +1,53 @@
+.formFeedBack{
+  min-height: 455px;
+  background-image: url("../image/content/bg-form.jpg");
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  &__wrapper {
+    min-height: 315px;
+  }
+
+  &__form {
+    max-width: 656px;
+    min-height: 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: $white;
+    position: absolute;
+    right: 0;
+    top: 45px;
+  }
+
+  &__form-wrapper {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.data-formFB{
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  min-width: 100%;
+
+  &__phone {
+    padding: 16px;
+    padding-left: 51px;
+    width: 198px
+  }
+
+  &__email {
+    padding: 16px;
+    width: 198px;
+    padding-right: 51px;
+  }
+}
