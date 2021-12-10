@@ -48,3 +48,27 @@
     transition: 0.7s ease-in-out;
   }
 }
+
+.phone-link {
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+
+  svg {
+    fill: $white;
+    stroke: $black;
+    transform: rotate(-15deg);
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    color: $basic-primary;
+
+    svg {
+      stroke: $basic-primary;
+    }
+  }
+}

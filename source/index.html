@@ -300,33 +300,54 @@
 
     <div class="cost">
       <section class="price">
-        <h3 class="font-sixth">Цены</h3>
-        <p class="font-costAbout">Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
+        <h3 class="price__title font-sixth">Цены</h3>
+        <p class="price__about font-costAbout">Специально для Вас  мы разработали 2 пакета цен с разными условиями, отталкиваясь от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
         <p class="font-contacts">Свяжитесь с нами</p>
-        <a class="phone-link font-secondary" href="tel:++749978468446">+7 (499) -784-684-46</a>
+        <a class="phone-link font-secondary" href="tel:++749978468446">
+          <svg role="img" class="phone" width="18" height="18" aria-label="phone" alt="phone">
+            <use xlink:href="image/sprite.svg#phone"></use>
+          </svg>
+          <span>
+            +7 (499) -784-684-46
+          </span>
+        </a>
       </section>
       <section class="price-complex">
-        <h3 class="font-offer-day js-offer-active">Комплексный<span class="font-offerCost">$1999</span></h3>
-        <p class="font-qualities">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
-        <ul>
-          <li class="font-qualitiesList">Разработанный маршрут с гидом группы</li>
-          <li class="font-qualitiesList">Перелет, трансфер и проживание в отелях</li>
-          <li class="font-qualitiesList">Завтраки, ужины в отелях и ланчи на природе</li>
-          <li class="font-qualitiesList">Экскурсии по удивительно красивым местам Европы</li>
-        </ul>
-        <button class="btn font-fourfh" type="button">купить тур сейчас</button>
+        <div class="price-complex__wrapper">
+          <div class="price-complex__offer">
+            <span class="font-offer-day">Комплексный</span>
+            <span class="font-offer-day">$1999</span>
+          </div>
+          <p class="price-complex__about font-qualities">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
+          <div class="price-complex__content">
+            <ul class="price-complex__list font-qualitiesList">
+              <li class="price-complex__item font-qualitiesList">Разработанный маршрут с гидом группы</li>
+              <li class="price-complex__item font-qualitiesList">Перелет, трансфер и проживание в отелях</li>
+              <li class="price-complex__item font-qualitiesList">Завтраки, ужины в отелях и ланчи на природе</li>
+              <li class="price-complex__item font-qualitiesList">Экскурсии по удивительно красивым местам Европы</li>
+            </ul>
+            <button class="btn font-fourfh" type="button">купить тур сейчас</button>
+          </div>
+        </div>
       </section>
       <section class="price-econom">
-        <h3 class="font-offer-day">Экономный<span class="font-offerCost">$1399</span></h3>
-        <p class="font-qualities">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
-        <ul>
-          <li class="font-qualitiesList">Разработанный маршрут с гидом группы</li>
-          <li class="font-qualitiesList">Перелет и трансфер</li>
-          <li class="font-qualitiesList">Проживание в хостелах при отелях</li>
-          <li class="font-qualitiesList">Только завтраки в отелях</li>
-          <li class="font-qualitiesList">Экскурсии по удивительно красивым местам Европы</li>
-        </ul>
-        <button class="btn font-fourfh" type="button">купить тур сейчас</button>
+        <div class="price-econom__wrapper">
+          <div class="price-econom__offer">
+            <span class="font-offerCost">Экономный</span>
+            <span class="font-offerCost">$1399</span>
+          </div>
+          <p class="price-econom__about font-qualities">Ознакомьтесь с перечнем того, что входит в данный пакет</p>
+          <div class="price-complex__content">
+            <ul class="price-econom__list">
+              <li class="price-econom__item font-qualitiesList">Разработанный маршрут с гидом группы</li>
+              <li class="price-econom__item font-qualitiesList">Перелет и трансфер</li>
+              <li class="price-econom__item font-qualitiesList">Проживание в хостелах при отелях</li>
+              <li class="price-econom__item font-qualitiesList">Только завтраки в отелях</li>
+              <li class="price-econom__item font-qualitiesList">Экскурсии по удивительно красивым местам Европы</li>
+            </ul>
+            <button class="btn font-fourfh" type="button">купить тур сейчас</button>
+          </div>
+        </div>
       </section>
     </div>
     <div class="formFeedBack">
