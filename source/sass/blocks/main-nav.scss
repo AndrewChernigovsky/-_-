@@ -1,0 +1,250 @@
+.main-nav {
+  width: auto;
+  order: 1;
+}
+
+.main-nav__wrapper {
+  min-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    min-width: 440px;
+  }
+
+  @media (min-width: $desktop-width) {
+    min-width: 480px;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 8px;
+  right: 4px;
+  z-index: 2;
+  display: block;
+  width: 72px;
+  height: 47px;
+  background-color: $white;
+  cursor: pointer;
+  border: none;
+
+  &:hover,
+  &:active {
+    background-color: $white;
+  }
+}
+
+.main-nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: $mobile-width-only) {
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.main-nav__item {
+  border-top: 1px solid $spcl_gray3;
+
+  @media (max-width: $mobile-width-only) {
+    min-width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-top: 0;
+    border-bottom: 0;
+  }
+}
+
+.main-nav__link {
+  position: relative;
+  display: block;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: $black;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--active {
+    @media (max-width: $mobile-width-only) {
+      opacity: 1;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-top: 9px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid $green;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    padding: 21px 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+
+    &--active {
+      border-bottom: 1px solid $green;
+    }
+
+    &--desktop-active {
+      border-bottom: 1px solid $white;
+    }
+  }
+}
+
+.main-nav__link-desktop {
+  @media (min-width: $desktop-width) {
+    color: $white;
+  }
+}
+
+.main-nav--closed .main-nav__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 31px;
+    width: 25px;
+    height: 2px;
+    background-color: $black;
+    box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+  }
+
+  &:active::before {
+    background-color: fade($white, 30%);
+    box-shadow: 0 8px 0 0 fade($white, 30%), 0 16px 0 0 fade($white, 30%);
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--opened .main-nav__toggle {
+    top: 10px;
+    right: -4px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 23px;
+      left: 15px;
+      width: 36px;
+      height: 2px;
+      background-color: $black;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: fade($white, 30%);
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__item {
+    display: none;
+
+    &--active {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav--closed .main-nav__toggle {
+    display: none;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__toggle--active {
+    top: -60px;
+    left: auto;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 24px;
+      left: 18px;
+      width: 36px;
+      height: 2px;
+      background-color: $black;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background-color: fade($white, 30%);
+    }
+  }
+}
+
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs .main-nav__item {
+  display: block;
+}
