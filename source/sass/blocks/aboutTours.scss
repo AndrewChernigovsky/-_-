@@ -1,7 +1,3 @@
-.js-aboutTours-header.active .aboutTours__link{
-  color: $basic-primary;
-}
-
 .aboutTours {
   &__content-wrapper {
     display: flex;
@@ -16,6 +12,14 @@
     border-bottom: 1px solid $basic-thirda3;
     padding-bottom: 15px;
     max-width: 900px;
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__content.active {
+    display: block;
   }
 
   &__body {
@@ -46,6 +50,10 @@
     width: 382px;
     background-color: $white;
     padding: 20px;
+  }
+
+  &__link.active {
+    color: $basic-primary;
   }
 }
 

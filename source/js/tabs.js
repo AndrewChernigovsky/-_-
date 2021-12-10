@@ -1,15 +1,19 @@
-const tab = document.querySelectorAll('js-aboutTours-header');
-const tabs = [];
+let tabsTours = document.querySelectorAll('.aboutTours__link');
+let content = document.querySelectorAll('.aboutTours__content');
 
-tabs = for()
+for (let i = 0; i < tabsTours.length; i++) {
+  tabsTours[i].addEventListener('click', () => tabClick(i));
+}
 
-tabs.addEventListener('click', toggle(){
-  console.log(1);
-  let id = this.attr('data-tab'),
-    content = this('.js-aboutTours-body[data-tab="'+ id +'"]');
-  this('.js-aboutTours-header.active').removeClass('active');
-  this.addClass('active');
+function tabClick(currentTab) {
+    removeActive();
+    tabsTours[currentTab].classList.add('active');
+    content[currentTab].classList.add('active');
+}
 
-  this('.js-aboutTours-body.active').removeClass('active');
-  content.addClass('active');
-});
+function removeActive() {
+    for (let i = 0; i < tabsTours.length; i++) {
+        tabsTours[i].classList.remove('active');
+        content[i].classList.remove('active');
+    }
+}
