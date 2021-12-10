@@ -351,17 +351,21 @@
       </section>
     </div>
     <div class="formFeedBack">
-      <form>
-        <legend class="font-feedBack">У Вас остались вопросы?</legend>
-        <p class="font-callnwrite">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
-        <fieldset>
-          <label for="phone"></label>
-          <input type="tel" id="phone" placeholder="Введите 10 цифр номера" aria-label="Введите phone" required>
-          <label for="email"></label>
-          <input type="email" id="email" placeholder="E-mail" aria-label="Введите email" required>
-        </fieldset>
-        <button class="btn font-fourfh" type="submit">отправить</button>
-      </form>
+      <div class="formFeedBack__wrapper">
+        <form class="formFeedBack__form" method="POST" action="https://echo.htmlacademy.ru">
+          <div class="formFeedBack__form-wrapper">
+            <p class="font-feedBack">У Вас остались вопросы?</p>
+            <p class="font-callnwrite">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+            <fieldset class="data-formFB">
+              <label for="phone"></label>
+              <input class="data-formFB__phone" type="tel" id="phone" placeholder="Введите 10 цифр номера" aria-label="Введите phone" required>
+              <label for="email"></label>
+              <input class="data-formFB__email" type="email" id="email" placeholder="E-mail" aria-label="Введите email" required>
+            </fieldset>
+            <button class="btn font-fourfh" type="submit">отправить</button>
+          </div>
+        </form>
+      </div>
     </div>
     <footer class="main-footer">
       <article>
