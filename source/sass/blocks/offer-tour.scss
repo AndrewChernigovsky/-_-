@@ -7,9 +7,13 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+  min-width: 100%;
+  min-height: 235px;
+  margin-bottom: 280px;
 
   @media screen and (min-width: $tb) {
     min-height: 344px;
+    margin-bottom: 80px;
   }
 
   @media screen and (min-width: $ds) {
@@ -18,7 +22,13 @@
 
   &__wrapper{
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    max-height: 235px;
+
+    @media screen and (min-width: $tb) {
+      min-height: 344px;
+      justify-content: flex-end;
+    }
   }
 
   &__link {
@@ -30,7 +40,7 @@
       position: absolute;
       width: 14px;
       height: 14px;
-      top: 31px;
+      top: 18px;
       right: 40px;
       background-image: url("../image/icons/arrowDown.svg");
       background-repeat: no-repeat;
@@ -44,7 +54,33 @@
   display: flex;
   min-width: 300px;
   max-width: 412px;
-  padding-right: 50px;
   flex-direction: column;
-  margin-top: 185px;
+  text-align: center;
+  align-items: center;
+
+  @media screen and (min-width: $tb) {
+    margin: 0 auto;
+    margin-top: 60px;
+    align-items: center;
+  }
+
+  @media screen and (min-width: $ds) {
+    margin-right: 0;
+    margin-top: 185px;
+    align-items: flex-start;
+    text-align: left;
+    padding-right: 50px;
+  }
+}
+
+.main-title {
+  margin: 100px auto 115px auto;
+
+  @media screen and (min-width: $tb) {
+    margin: 0 auto;
+  }
+}
+
+.main-subtitle {
+  line-height: 1.5;
 }
