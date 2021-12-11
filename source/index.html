@@ -29,15 +29,22 @@
               <span class="visually-hidden">Открыть меню</span>
             </button>
             <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link font-primary" href="#no__scroll">О путешествии</a>
+              <li class="main-nav__item">
+                <a class="main-nav__link font-primary" href="#no__scroll">О путешествии</a>
               </li>
               <li class="main-nav__item">
                 <a class="main-nav__link font-primary" href="#no__scroll">Цены</a>
               </li>
             </ul>
             <div class="phone-wrapper">
-              <a class="phone-link font-secondary" href="tel:++749978468446">+7 (499) -784-684-46</a>
+              <a class="phone-link phone-footer font-secondary" href="tel:++749978468446">
+                <svg role="img" class="phone" width="18" height="18" aria-label="phone" alt="phone">
+                  <use xlink:href="image/sprite.svg#phone"></use>
+                </svg>
+                <span>
+                  +7 (499) -784-684-46
+                </span>
+              </a>
             </div>
           </div>
         </nav>
@@ -356,7 +363,7 @@
         </div>
       </section>
     </div>
-    <div class="formFeedBack">
+    <div class="formFeedBack" style="display: none;">
       <div class="formFeedBack__wrapper">
         <form class="formFeedBack__form" method="POST" action="https://echo.htmlacademy.ru">
           <div class="formFeedBack__form-wrapper">
@@ -373,7 +380,7 @@
         </form>
       </div>
     </div>
-    <footer class="main-footer">
+    <footer class="main-footer" style="display: none;">
       <div class="main-footer__wrapper">
         <article class="main-footer__tour">
           <h3 class="font-lastTitle">Следующие путешествия</h3>
