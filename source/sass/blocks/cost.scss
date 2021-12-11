@@ -1,22 +1,50 @@
 .cost {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   margin-bottom: 140px;
+  flex-direction: row-reverse;
+  justify-content: center;
 
-  .price,.price-complex,.price-econom{
-    flex-basis: 370px;
+  .price-complex,.price-econom{
+    flex-basis: 25.2%;
     min-height: min-content;
+
+    @media (min-width:$ds){
+      flex-basis: 31.2%;
+    }
+  }
+
+  .price{
+    min-width: 100%;
+    min-height: min-content;
+
+    @media (min-width:$ds){
+      flex-basis: 26.5%;
+    }
+  }
+
+  @media (min-width:$ds){
+    justify-content: space-between;
   }
 }
 
 .price {
+  order: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
 
   &__title {
-    padding-bottom: 32px;
-    border-bottom: 3px solid $basic-primary;
     margin-bottom: 30px;
+
+    @media (min-width:$ds){
+      padding-bottom: 32px;
+      border-bottom: 3px solid $basic-primary;
+    }
   }
 
   &__about {
@@ -29,26 +57,47 @@
       stroke: $basic-primary;
     }
   }
+
+  @media (min-width:$ds){
+  }
 }
 
 .price-complex {
   border: 3px solid $basic-primary;
+  order: 1;
 
   &__wrapper{
-    padding: 40px 30px;
+    padding: 20px 10px;
     min-height: 100%;
+    width: 300px;
+
+    @media (min-width:$ds){
+      padding: 40px 30px;
+    }
   }
   &__offer {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+
+    flex-wrap: wrap;
+    width: min-content;
+    justify-content: center;
+    margin: 0 auto;
+
+    @media (min-width:$ds){
+      padding: 40px 30px;
+    }
   }
   &__about {
     padding-bottom: 28px;
     border-bottom: 1px solid $basic-primary;
     margin-bottom: 30px;
+
+    text-align: center;
   }
+
   &__content{
     display: flex;
     flex-direction: column;
@@ -82,11 +131,17 @@
 
 .price-econom {
   border: 3px solid $basic-primary;
+  order: 2;
 
   &__wrapper {
-    padding: 40px 30px;
+    padding: 20px 10px;
     min-height: 100%;
     position: relative;
+    min-height: 100%;
+
+    @media (min-width:$ds){
+      padding: 40px 30px;
+    }
   }
   &__offer {
     display: flex;
