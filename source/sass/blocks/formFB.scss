@@ -1,27 +1,58 @@
 .formFeedBack{
-  min-height: 455px;
-  background-image: url("../image/content/bg-form.jpg");
-  position: relative;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-bottom: 160px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+
+  @media (min-width: $ds) {
+    min-height: 455px;
+    background-size: contain;
+    width: 100%;
+    margin-left: auto;
+  }
 
   &__wrapper {
-    min-height: 315px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+    min-height: inherit;
+    position: relative;
+    margin-bottom: 160px;
+    min-height: 445px;
+    background-color: $lightWhite2;
+
+    @media (min-width: $tb) {
+      background-image: url("../image/content/bg-form.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+
+    @media (min-width: $ds) {
+      min-height: 445px;
+      background-size: contain;
+    }
   }
 
   &__form {
-    max-width: 656px;
+    max-width: 558px;
     min-height: 215px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    background-color: $white;
-    position: absolute;
-    right: 0;
-    top: 45px;
+    padding: 10px;
+    background-color: transparent;
+
+    @media (min-width: $tb) {
+      padding: 50px;
+      background-color: $white;
+    }
+
+    @media (min-width: $ds) {
+      position: absolute;
+      right: 0;
+      top: 45px;
+    }
   }
 
   &__form-wrapper {
@@ -30,6 +61,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
   }
 }
 
@@ -38,6 +70,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
   margin-bottom: 20px;
   min-width: 100%;
 
@@ -51,5 +84,25 @@
     padding: 16px;
     width: 198px;
     padding-right: 51px;
+  }
+
+  input:nth-child(n){
+    margin-bottom: 20px;
+
+    &:last-child{
+      margin-bottom: 0;
+
+      @media (min-width: $tb) {
+        margin-bottom: auto;
+      }
+    }
+
+    @media (min-width: $tb) {
+      margin-bottom: auto;
+    }
+  }
+
+  @media (min-width: $tb) {
+    flex-direction: row;
   }
 }
