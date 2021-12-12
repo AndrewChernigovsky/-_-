@@ -3,9 +3,15 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    min-height: 500px;
+    flex-wrap: wrap;
 
     @media (min-width: $tb){
       flex-direction: row;
+    }
+
+    @media (min-width: $ds){
+      flex-wrap: nowrap;
     }
   }
 
@@ -36,6 +42,12 @@
 
   &__info {
     min-width: 30%;
+
+    margin-bottom: 30px;
+
+    @media (min-width: $ds){
+      margin-bottom: 0;
+    }
   }
 
   &__title {
@@ -44,21 +56,67 @@
   }
 
   &__feedback {
-    min-width: 60%;
+    min-width: 100%;
     position: relative;
+
+    @media (min-width: $ds){
+      min-width: 60%;
+    }
   }
 
   &__review {
     position: absolute;
-    top: 90px;
-    right: 110px;
-    width: 382px;
     background-color: $white;
     padding: 20px;
+    top: 80px;
+    left: 19%;
+    width: 52%;
+    min-height: 368px;
+
+    @media (min-width: $ds){
+      top: 90px;
+      right: 110px;
+      width: 382px;
+    }
   }
 
   &__link.active {
     color: $basic-primary;
+  }
+
+  &__feedback-wrapper {
+    min-width: 60%;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+
+    @media (min-width: $ds){
+      max-width: 40%;
+      margin-left: 40px;
+    }
+  }
+
+  &__image{
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: 68%;
+    background-repeat: no-repeat;
+    background-image: url('../image/content/greciaTest.jpg');
+    min-width: 100%;
+    min-height: 415px;
+
+    @media (min-width: $ds){
+      min-width: 60%;
+      min-height: 596px;
+    }
+  }
+
+  &__title {
+    border-bottom: 1px solid $basic-primary;
+    padding-bottom: 10px;
+    @media (min-width: $ds){
+      border-bottom: none;
+    }
   }
 }
 
