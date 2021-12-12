@@ -1,7 +1,26 @@
 .btn {
   background-color: $basic-primary;
   width: 288px;
-  height: 55px;
+  height: 50px;
   text-align: center;
   padding: 10px;
+  text-transform: uppercase;
+  border: none;
+
+  @media (min-width:ds) {
+    &:hover {
+      background-color: $basic-secondary;
+    }
+  }
+
+
+  &:active {
+    background-color: $basic-secondary;
+  }
+
+  &:focus {
+    border: none;
+    outline: 1px solid $black;
+  }
+
 }
