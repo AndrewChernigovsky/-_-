@@ -61,7 +61,7 @@
     </div>
   </header>
   <main class="main-content container">
-    <section class="places-section">
+    <section class="places-section" style="display: none;">
       <h2 class="font-six">Места посещения</h2>
       <p class="font-qualitiesList">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
       <div class="places">
@@ -138,7 +138,7 @@
       </div>
     </section>
 
-    <div class="aboutTours" style="display: none;">
+    <div class="aboutTours">
       <div class="aboutTours__wrapper">
         <ul class="aboutTours__header">
           <li class="aboutTours__tab">
@@ -166,23 +166,19 @@
                 <button class="btn font-fourfh" type="button">купить тур сейчас</button>
               </div>
               <div class="aboutTours__feedback">
-                <div class="aboutTours__image">
-                  <picture>
-                    <!-- <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/main_bg.webp 1x, image/content/main_bg@2x.webp 2x">
-                    <source type="image/webp" media="(min-width: 768px)" srcset="image/content/main_bg-tb.webp 1x, image/content/main_bg-tb@2x.webp 2x"> -->
-                    <img class="place__image" src="image/content/bg-feedBack1.png" alt="Греция" loading="lazy">
-                  </picture>
-                </div>
-                <div class="aboutTours__review">
-                  <h3 class="font-reviewTitle">Отзывы</h3>
-                  <p class="font-review">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!</p>
-                  <div class="userReview">
-                    <picture>
-                      <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/avatar-Vlada.webp 1x, image/content/avatar-Vlada@2x.webp 2x">
-                      <source type="image/webp" media="(min-width: 768px)" srcset="image/content/avatar-Vlada.webp 1x, image/content/avatar-Vlada@2x.webp 2x">
-                      <img class="userReview__image" src="image/content/avatar-Vlada.jpg" alt="Влада Голицина" loading="lazy">
-                    </picture>
-                    <span class="font-nameAvatar">Влада Голицина</span>
+                <div class="aboutTours__feedback-wrapper">
+                  <div class="aboutTours__image"></div>
+                  <div class="aboutTours__review">
+                    <h3 class="aboutTours__title font-reviewTitle">Отзывы</h3>
+                    <p class="font-review">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!</p>
+                    <div class="userReview">
+                      <picture>
+                        <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/avatar-Vlada.webp 1x, image/content/avatar-Vlada@2x.webp 2x">
+                        <source type="image/webp" media="(min-width: 768px)" srcset="image/content/avatar-Vlada.webp 1x, image/content/avatar-Vlada@2x.webp 2x">
+                        <img class="userReview__image" src="image/content/avatar-Vlada.jpg" alt="Влада Голицина" loading="lazy">
+                      </picture>
+                      <span class="font-nameAvatar">Влада Голицина</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -368,7 +364,7 @@
         </div>
       </section>
     </div>
-    <div class="formFeedBack">
+    <div class="formFeedBack" style="display: none;">
       <div class="formFeedBack__wrapper">
         <form class="formFeedBack__form" method="POST" action="https://echo.htmlacademy.ru">
           <div class="formFeedBack__form-wrapper">
@@ -385,7 +381,7 @@
         </form>
       </div>
     </div>
-    <footer class="main-footer">
+    <footer class="main-footer" style="display: none;">
       <div class="main-footer__wrapper">
         <article class="main-footer__tour">
           <h3 class="font-lastTitle">Следующие путешествия</h3>
