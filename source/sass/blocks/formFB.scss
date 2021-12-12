@@ -16,7 +16,7 @@
     min-width: 100%;
     min-height: inherit;
     position: relative;
-    margin-bottom: 160px;
+    margin-bottom: 20px;
     min-height: 445px;
     background-color: $lightWhite2;
 
@@ -24,11 +24,13 @@
       background-image: url("../image/content/bg-form.jpg");
       background-size: cover;
       background-repeat: no-repeat;
+      margin-bottom: 80px;
     }
 
 
     @media (min-width: $ds) {
       min-height: 445px;
+      margin-bottom: 160px;
       background-size: contain;
     }
   }
