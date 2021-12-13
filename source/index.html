@@ -140,23 +140,25 @@
 
     <div class="aboutTours">
       <div class="aboutTours__wrapper">
-        <ul class="aboutTours__header">
-          <li class="aboutTours__tab active">
-            <a class="aboutTours__link font-tabs active">Греция</a>
-          </li>
-          <li class="aboutTours__tab">
-            <a class="aboutTours__link font-tabs">Албания</a>
-          </li>
-          <li class="aboutTours__tab">
-            <a class="aboutTours__link font-tabs">Македония</a>
-          </li>
-          <li class="aboutTours__tab">
-            <a class="aboutTours__link font-tabs">Черногория</a>
-          </li>
-          <li class="aboutTours__tab">
-            <a class="aboutTours__link font-tabs">Хорватия</a>
-          </li>
-        </ul>
+        <div class="aboutTours__header-wrapper">
+          <ul class="aboutTours__header">
+            <li class="aboutTours__tab active">
+              <a class="aboutTours__link font-tabs active">Греция</a>
+            </li>
+            <li class="aboutTours__tab">
+              <a class="aboutTours__link font-tabs">Албания</a>
+            </li>
+            <li class="aboutTours__tab">
+              <a class="aboutTours__link font-tabs">Македония</a>
+            </li>
+            <li class="aboutTours__tab">
+              <a class="aboutTours__link font-tabs">Черногория</a>
+            </li>
+            <li class="aboutTours__tab">
+              <a class="aboutTours__link font-tabs">Хорватия</a>
+            </li>
+          </ul>
+        </div>
         <div class="aboutTours__body" id="aboutTours">
           <div class="aboutTours__body-wrapper">
             <div class="aboutTours__content active" >
@@ -340,7 +342,7 @@
               <li class="price-complex__item font-qualitiesList">Завтраки, ужины в отелях и ланчи на природе</li>
               <li class="price-complex__item font-qualitiesList">Экскурсии по удивительно красивым местам Европы</li>
             </ul>
-            <button class="btn font-fourfh" type="button">купить тур сейчас</button>
+            <button class="btn btn-cost font-fourfh" type="button">купить тур сейчас</button>
           </div>
         </div>
       </section>
@@ -361,7 +363,7 @@
               <li class="price-econom__item font-qualitiesList">Только завтраки в отелях</li>
               <li class="price-econom__item font-qualitiesList">Экскурсии по удивительно красивым местам Европы</li>
             </ul>
-            <button class="btn font-fourfh" type="button">купить тур сейчас</button>
+            <button class="btn btn-cost font-fourfh" type="button">купить тур сейчас</button>
           </div>
         </div>
       </section>
@@ -439,7 +441,43 @@
       </div>
     </footer>
   </main>
+  <div class="modal" id="modal-formFeedBack">
+    <div class="modal__wrapper">
+      <div class="modal__image"></div>
+      <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru">
+        <div class="formFeedBack__form-wrapper">
+          <button class="formFeedBack__form-toggle" type="button">
+            <span class="btn-close" id="btnModalFormClose">Закрыть</span>
+          </button>
+          <p class="font-feedBack">Купить тур</p>
+          <p class="font-callnwrite">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
+          <fieldset class="modal__data data-formFB">
+            <label for="phone"></label>
+            <input class="data-formFB__phone" type="tel" id="phone" placeholder="Введите 10 цифр номера" aria-label="Введите phone" required>
+            <label for="email"></label>
+            <input class="data-formFB__email" type="email" id="email" placeholder="E-mail" aria-label="Введите email" required>
+          </fieldset>
+          <button class="btn font-fourfh" type="submit">отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <template id="success">
+    <div class="success">
+      <p class="success__message">Ваше объявление<br>успешно размещено!</p>
+    </div>
+  </template>
+
+  <template id="error">
+    <div class="error">
+      <p class="error__message">Ошибка размещения объявления</p>
+      <button type="button" class="error__button">Попробовать снова</button>
+    </div>
+  </template>
+
   <script src="js/menu.js"></script>
+  <script src="js/modal-form.js"></script>
   <script src="js/tabs.js"></script>
 </body>
 </html>

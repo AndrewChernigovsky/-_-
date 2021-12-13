@@ -1,13 +1,13 @@
 .aboutTours {
   &__tab {
-    display: none;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+
     @media (min-width: $ds){
       display: block;
+      min-width: auto;
     }
-  }
-
-  &__tab.active {
-    display: block;
   }
 
   &__content-wrapper {
@@ -25,28 +25,39 @@
     }
   }
 
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    padding: 0;
-    border-bottom: 1px solid $basic-thirda3;
-    padding-bottom: 15px;
-    max-width: 900px;
-    align-items: center;
+  &__header-wrapper {
+    max-width: 100%;
     overflow: hidden;
 
     @media (min-width: $ds){
+      overflow: auto;
+    }
+  }
+
+  &__header {
+    display: flex;
+    position: relative;
+    left: 0;
+    padding: 0;
+    transition: all ease 1s;
+    list-style-type: none;
+
+    @media (min-width: $ds){
+      min-width: 80%;
       flex-direction: row;
       align-items:stretch;
       height: min-content;
-      overflow: auto;
+      justify-content: space-between;
+      border-bottom: 1px solid $basic-thirda3;
+      padding-bottom: 15px;
+      max-width: 900px;
+      align-items: center;
     }
   }
 
   &__content {
     overflow: hidden;
-    min-width: inherit;
+    min-width: min-content;
 
     @media (min-width: $ds){
       display: none;

@@ -3,7 +3,8 @@ const contentTours = document.querySelectorAll('.aboutTours__content');
 const contentWrapperTours = document.querySelectorAll('.aboutTours__content-wrapper');
 const bodyTours = document.querySelector('.aboutTours__body');
 const bodyWrapperTours = document.querySelector('.aboutTours__body-wrapper');
-const headerTours = document.querySelectorAll('.aboutTours__tab');
+const tabTours = document.querySelectorAll('.aboutTours__tab');
+const headerTours = document.querySelector('.aboutTours__header');
 
 for (let i = 0; i < tabsTours.length; i++) {
   tabsTours[i].addEventListener('click', () => tabClick(i));
@@ -23,8 +24,15 @@ function removeActive() {
 }
 
 for (let i = 0; i < tabsTours.length; i++) {
-  contentTours[i].addEventListener('touchstart', handleTouchStart, false);
-  contentTours[i].addEventListener('touchmove', handleTouchMove, false);
+  if(contentTours[i].addEventListener('touchstart', handleTouchStart, false)){
+    SwipeAnimates()
+    tabsTours[i].classList.remove('active');
+  }
+
+  if(contentTours[i].addEventListener('touchmove', handleTouchMove, false)) {
+    SwipeAnimates()
+    tabsTours[i].classList.add('active');
+  };
 }
 
 let x1 = null;
@@ -86,5 +94,4 @@ function swipeTour(){
 
  function SwipeAnimate() {
   bodyWrapperTours.style.transform = 'translate(-' + count * width + 'px)';
-
 }
