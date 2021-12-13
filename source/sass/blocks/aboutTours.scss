@@ -1,4 +1,15 @@
 .aboutTours {
+  &__tab {
+    display: none;
+    @media (min-width: $ds){
+      display: block;
+    }
+  }
+
+  &__tab.active {
+    display: block;
+  }
+
   &__content-wrapper {
     display: flex;
     justify-content: space-between;
@@ -6,12 +17,11 @@
     min-height: 500px;
     flex-wrap: wrap;
 
+    min-width: 100%;
+    overflow: hidden;
+
     @media (min-width: $tb){
       flex-direction: row;
-    }
-
-    @media (min-width: $ds){
-      flex-wrap: nowrap;
     }
   }
 
@@ -23,26 +33,58 @@
     border-bottom: 1px solid $basic-thirda3;
     padding-bottom: 15px;
     max-width: 900px;
+    align-items: center;
+    overflow: hidden;
+
+    @media (min-width: $ds){
+      flex-direction: row;
+      align-items:stretch;
+      height: min-content;
+      overflow: auto;
+    }
   }
 
   &__content {
-    display: none;
+    overflow: hidden;
+    min-width: inherit;
+
+    @media (min-width: $ds){
+      display: none;
+    }
   }
 
-  &__content.active {
+  &__content.active  {
     display: block;
   }
 
   &__body {
     background-repeat: no-repeat;
     background-image: url('../image/content/bg-feedBack.png');
-    width: 100%;
-    height: 500px;
+    min-width: 100%;
+    min-height: 500px;
+    margin-bottom: 50px;
+    background-size: contain;
+    overflow: hidden;
+    display: flex;
+
+    @media (min-width: $ds){
+      background-repeat: no-repeat;
+      background-image: url('../image/content/bg-feedBack.png');
+      min-width: 100%;
+      min-height: 500px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__body-wrapper {
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
   }
 
   &__info {
     min-width: 30%;
-
     margin-bottom: 30px;
 
     @media (min-width: $ds){
