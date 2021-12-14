@@ -22,21 +22,21 @@
 
     @media (min-width: $tb) {
       background-image: url("../image/content/bg-form.jpg");
-      background-size: cover;
       background-repeat: no-repeat;
       margin-bottom: 80px;
+      background-size: contain;
     }
 
 
     @media (min-width: $ds) {
-      min-height: 445px;
-      margin-bottom: 160px;
-      background-size: contain;
+      min-height: 455px;
+      margin-bottom: 148px;
+      background-size: cover;
+      background-position: -326px;
     }
   }
 
   &__form {
-    max-width: 558px;
     min-height: 215px;
     display: flex;
     flex-direction: column;
@@ -51,9 +51,12 @@
     }
 
     @media (min-width: $ds) {
+      padding: 50px 30px;
       position: absolute;
       right: 0;
-      top: 45px;
+      top: 70px;
+      min-width: 656px;
+      max-height: 315px;
     }
   }
 
@@ -64,6 +67,19 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+
+    .font-feedBack {
+      @media (min-width: $ds) {
+        margin-bottom: 0px;
+        margin-top: 3px;
+      }
+    }
+
+    .font-callnwrite {
+      @media (min-width: $ds) {
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 
@@ -76,16 +92,46 @@
   margin-bottom: 20px;
   min-width: 100%;
 
+
+  &__btn {
+    @media (min-width: $ds) {
+      margin-bottom: 0px;
+      width: 177px;
+    }
+  }
+
   &__phone {
     padding: 16px;
     padding-left: 51px;
-    width: 198px
+    position: relative;
+
+    &::placeholder{
+      color: $basic-six;
+    }
+
+    @media (min-width: $ds) {
+      flex-grow: 1;
+      margin-right: 17px;
+    }
+  }
+
+  &__phone-label {
+    position: absolute;
+    z-index: 11;
+    left: 66px;
   }
 
   &__email {
     padding: 16px;
-    width: 198px;
     padding-right: 51px;
+
+    &::placeholder{
+      color: $basic-six;
+    }
+
+    @media (min-width: $ds) {
+      flex-grow: 1;
+    }
   }
 
   input:nth-child(n){
@@ -107,4 +153,16 @@
   @media (min-width: $tb) {
     flex-direction: row;
   }
+
+  @media (min-width: $ds) {
+    min-width: 98%;
+    margin-bottom: 15px;
+  }
+}
+
+.star-require {
+  color: red;
+  font-size: 18px;
+  left: -2px;
+  top: -5px;
 }

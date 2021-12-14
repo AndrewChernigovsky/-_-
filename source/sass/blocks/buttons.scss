@@ -6,10 +6,12 @@
   padding: 10px;
   text-transform: uppercase;
   border: none;
+  cursor: pointer;
 
-  @media (min-width:ds) {
+  @media (min-width: $ds) {
     &:hover {
       background-color: $basic-secondary;
+      transition: 0.3s ease-in-out;
     }
   }
 
@@ -26,7 +28,7 @@
 }
 
 .btn-cost {
-  @media (min-width:ds) {
+  @media (min-width:$ds) {
     min-height: 75px;
     min-width: 310px;
   }
