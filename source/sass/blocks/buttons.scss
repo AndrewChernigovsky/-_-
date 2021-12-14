@@ -24,3 +24,10 @@
   }
 
 }
+
+.btn-cost {
+  @media (min-width:ds) {
+    min-height: 75px;
+    min-width: 310px;
+  }
+}
