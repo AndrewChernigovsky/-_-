@@ -47,7 +47,6 @@
 
     @media (min-width: $ds){
       min-width: 76.8%;
-      padding-left: 5px;
       flex-direction: row;
       align-items:stretch;
       height: min-content;
@@ -119,7 +118,6 @@
       @media (min-width: $ds){
         line-height: 175%;
         letter-spacing: -0.47px;
-        padding-left: 4px;
         margin-bottom: 51px;
       }
     }
@@ -212,7 +210,6 @@
   &__title {
     @media (min-width: $ds){
       padding-bottom: 4px;
-      padding-left: 5px;
       position: relative;
       margin-bottom: 56px;
 
@@ -222,7 +219,7 @@
         width: 175px;
         height: 3px;
         bottom: -27px;
-        left: 5px;
+        left: 0;
         background-color: $basic-primary;
       }
     }
@@ -232,7 +229,6 @@
     @media (min-width: $ds){
       width: 250px;
       height: 76px;
-      margin-left: 5px;
     }
   }
 
