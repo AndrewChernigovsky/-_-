@@ -1,23 +1,22 @@
 .offer-tour {
   min-width: 100%;
-  min-height: 235px;
+  max-height: 235px;
   background-color: $loader-bg;
   background-image: url('../image/content/main_bg.jpg');
   object-fit: cover;
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  min-width: 100%;
-  min-height: 235px;
-  margin-bottom: 280px;
+  margin-bottom: 264px;
 
   @media screen and (min-width: $tb) {
     min-height: 344px;
-    margin-bottom: 80px;
+    margin-bottom: 61px;
   }
 
   @media screen and (min-width: $ds) {
     min-height: 860px;
+    margin-bottom: 155px;
   }
 
   &__wrapper{
@@ -33,6 +32,7 @@
 
   &__link {
     position: relative;
+    min-width: 288px;
 
     &::after {
       display: block;
@@ -41,11 +41,29 @@
       width: 14px;
       height: 14px;
       top: 18px;
-      right: 40px;
+      right: 39px;
       background-image: url("../image/icons/arrowDown.svg");
       background-repeat: no-repeat;
       background-size: contain;
       flex: none;
+      @media (min-width: $tb) {
+        top: 18px;
+        right: 39px;
+      }
+      @media (min-width: $ds) {
+        top: 31px;
+        right: 38px;
+      }
+    }
+
+    @media (min-width: $tb) {
+      padding: 25px 40px;
+      min-width: 250px;
+      text-transform: uppercase;
+    }
+    @media (min-width: $ds) {
+      padding: 38px 40px;
+      min-width: 335px;
     }
   }
 }
@@ -54,18 +72,22 @@
   display: flex;
   min-width: 300px;
   max-width: 412px;
+  min-height: 432px;
   flex-direction: column;
   text-align: center;
   align-items: center;
+  justify-content: space-between;
 
   @media screen and (min-width: $tb) {
     margin: 0 auto;
-    margin-top: 60px;
+    margin-top: 65px;
     align-items: center;
+    min-height: min-content;
+    justify-content: start;
   }
 
   @media screen and (min-width: $ds) {
-    margin-right: 0;
+    margin-right: 60px;
     margin-top: 185px;
     align-items: flex-start;
     text-align: left;
@@ -74,13 +96,29 @@
 }
 
 .main-title {
-  margin: 100px auto 115px auto;
+  margin: 85px auto 85px;
+  line-height: 1.4;
 
-  @media screen and (min-width: $tb) {
+  @media (min-width: $tb) {
     margin: 0 auto;
+  }
+
+  @media (min-width: $ds) {
+    margin-bottom: 20px;
   }
 }
 
 .main-subtitle {
-  line-height: 1.5;
+  line-height: 1.7;
+  letter-spacing: -0.47px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tb) {
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: $ds) {
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
 }

@@ -1,11 +1,11 @@
 .container {
   min-width: $mb - 20px;
-  max-width: $ds + 146px;
+  max-width: $ds + 186px;
   margin: 0 auto;
   padding: 0 10px;
 
   @media screen and (min-width: $tb) {
-    padding: 0 20px;
+    padding: 0 15px;
   }
 }
 

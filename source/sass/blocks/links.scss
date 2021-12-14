@@ -65,8 +65,8 @@
     stroke: $black;
     transform: rotate(-15deg);
     margin-right: 10px;
-    width: 18px;
-    height: 18px;
+    width: 35px;
+    height: 25px;
   }
 
   &:hover {
@@ -89,16 +89,17 @@
   }
 }
 
-.phone-footer {
+.phone {
   line-height: 2;
+  text-decoration: underline;
 
   svg {
     fill: $white;
     stroke: $basic-seven;
     transform: rotate(0deg);
     margin-right: 10px;
-    width: 18px;
-    height: 18px;
+    width: 35px;
+    height: 25px;
   }
 
   &:hover {
