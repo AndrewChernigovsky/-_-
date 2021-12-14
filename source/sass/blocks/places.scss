@@ -6,6 +6,7 @@
 
   @media (min-width: $ds) {
     justify-content: space-between;
+    margin-bottom: 12px;
   }
 }
 
@@ -32,15 +33,10 @@
   }
 
   &__heading {
-    justify-content: start;
+    justify-content: flex-start;
     display: flex;
     flex-direction: column;
     min-width: 100%;
-
-    @media (max-width: $ds) {
-      margin-bottom: 25px;
-      align-items: center;
-    }
 
     @media (min-width: $mb) {
       margin-bottom: 3px;
@@ -48,13 +44,12 @@
 
     @media (min-width: $tb) {
       margin-bottom: 25px;
+      align-items: center;
     }
 
 
     @media (min-width: $ds) {
-      justify-content: start;
-      display: flex;
-      flex-direction: column;
+      align-items: flex-start;
       text-align: left;
       padding-left: 5px;
       margin-bottom: auto;
@@ -109,7 +104,7 @@
   @media (max-width: $ds) {
     min-width: auto;
     margin-bottom: 37px;
-    flex-basis: 44%;
+    flex-basis: 30%;
   }
 
   @media (min-width: $mb) {

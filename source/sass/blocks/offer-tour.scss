@@ -63,7 +63,7 @@
     }
     @media (min-width: $ds) {
       padding: 38px 40px;
-      min-width: 335px;
+      min-width: 339px;
     }
   }
 }
@@ -78,16 +78,16 @@
   align-items: center;
   justify-content: space-between;
 
-  @media screen and (min-width: $tb) {
+  @media (min-width: $tb) {
     margin: 0 auto;
-    margin-top: 65px;
+    margin-top: 60px;
     align-items: center;
     min-height: min-content;
     justify-content: start;
   }
 
-  @media screen and (min-width: $ds) {
-    margin-right: 60px;
+  @media (min-width: $ds) {
+    margin-right: 62px;
     margin-top: 185px;
     align-items: flex-start;
     text-align: left;
@@ -104,7 +104,8 @@
   }
 
   @media (min-width: $ds) {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
+    line-height: 1.5;
   }
 }
 

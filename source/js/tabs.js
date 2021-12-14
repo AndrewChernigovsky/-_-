@@ -84,8 +84,11 @@ function swipeTour(){
   bodyWrapperTours.style.width = width * contentTours.length + 'px';
 
   contentTours.forEach(item => {
-    item.style.width = width +'px';
-    item.style.height = 'auto';
+    // item.style.width = width +'px';
+    // item.style.height = 'auto';
+
+    item.width = window.innerWidth;
+    item.height = window.innerHeight;
   });
 
   SwipeAnimate();
