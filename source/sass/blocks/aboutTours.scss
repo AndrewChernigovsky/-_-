@@ -1,52 +1,86 @@
 .aboutTours {
-  &__tab {
-    display: none;
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+
     @media (min-width: $ds){
-      display: block;
+      background-repeat: no-repeat;
+      background-image: url('../image/content/bg-feedBack.png');
+      min-width: 50%;
+      max-width: 100%;
+      top: 135px;
+      left: -132px;
+      min-height: 50%;
+      max-height: 100%;
+      z-index: -1;
     }
   }
 
-  &__tab.active {
-    display: block;
+  &__tab {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: $ds){
+      display: block;
+      min-width: auto;
+    }
+  }
+
+  &__header-wrapper {
+    max-width: 100%;
+    overflow: hidden;
+
+    @media (min-width: $ds){
+      overflow: auto;
+    }
+  }
+
+  &__header {
+    display: flex;
+    position: relative;
+    left: 0;
+    padding: 0;
+    transition: all ease 1s;
+    list-style-type: none;
+
+    @media (min-width: $ds){
+      min-width: 76.8%;
+      padding-left: 5px;
+      flex-direction: row;
+      align-items:stretch;
+      height: min-content;
+      justify-content: space-between;
+      border-bottom: 1px solid $basic-thirda3;
+      padding-bottom: 15px;
+      margin-bottom: 42px;
+      max-width: 900px;
+      align-items: center;
+    }
   }
 
   &__content-wrapper {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    min-height: 500px;
     flex-wrap: wrap;
-
+    min-height: 100%;
     min-width: 100%;
     overflow: hidden;
 
     @media (min-width: $tb){
       flex-direction: row;
     }
-  }
-
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-    padding: 0;
-    border-bottom: 1px solid $basic-thirda3;
-    padding-bottom: 15px;
-    max-width: 900px;
-    align-items: center;
-    overflow: hidden;
 
     @media (min-width: $ds){
-      flex-direction: row;
-      align-items:stretch;
-      height: min-content;
-      overflow: auto;
+      flex-wrap: nowrap;
     }
   }
 
   &__content {
     overflow: hidden;
-    min-width: inherit;
+    min-width: min-content;
 
     @media (min-width: $ds){
       display: none;
@@ -58,22 +92,6 @@
   }
 
   &__body {
-    background-repeat: no-repeat;
-    background-image: url('../image/content/bg-feedBack.png');
-    min-width: 100%;
-    min-height: 500px;
-    margin-bottom: 50px;
-    background-size: contain;
-    overflow: hidden;
-    display: flex;
-
-    @media (min-width: $ds){
-      background-repeat: no-repeat;
-      background-image: url('../image/content/bg-feedBack.png');
-      min-width: 100%;
-      min-height: 500px;
-      margin-bottom: 50px;
-    }
   }
 
   &__body-wrapper {
@@ -81,6 +99,10 @@
     position: relative;
     left: 0;
     transition: all ease 1s;
+
+    @media (min-width: $ds){
+      min-height: 620px;
+    }
   }
 
   &__info {
@@ -89,12 +111,18 @@
 
     @media (min-width: $ds){
       margin-bottom: 0;
+      min-width: 31.5%;
+      flex-basis: min-content;
     }
-  }
 
-  &__title {
-    border-bottom: 3px solid $basic-primary;
-    padding-bottom: 10px;
+    p {
+      @media (min-width: $ds){
+        line-height: 175%;
+        letter-spacing: -0.47px;
+        padding-left: 4px;
+        margin-bottom: 51px;
+      }
+    }
   }
 
   &__feedback {
@@ -109,16 +137,44 @@
   &__review {
     position: absolute;
     background-color: $white;
-    padding: 20px;
+    padding: 20px 30px 26px 30px;
     top: 80px;
     left: 19%;
     width: 52%;
-    min-height: 368px;
+    height: min-content;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     @media (min-width: $ds){
-      top: 90px;
-      right: 110px;
+      top: 136px;
+      left: 318px;
       width: 382px;
+    }
+  }
+
+  &__review-title {
+    @media (min-width: $ds){
+      margin-bottom: 20px;
+      margin-top: 13px;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 68px;
+        height: 2px;
+        bottom: -13px;
+        left: 0px;
+        background-color: $basic-primary;
+      }
+    }
+  }
+
+  &__review-subtitle {
+    @media (min-width: $ds){
+      margin-bottom: 30px;
     }
   }
 
@@ -132,33 +188,56 @@
     margin-left: calc(-50vw + 50%);
 
     @media (min-width: $ds){
+      width: 60%;
       max-width: 40%;
-      margin-left: 40px;
+      margin-left: 3px;
+      min-height: 620px;
+      position: relative;
     }
   }
 
   &__image{
-    position: relative;
-    overflow: hidden;
-    background-size: cover;
-    background-position: 68%;
-    background-repeat: no-repeat;
-    background-image: url('../image/content/greciaTest.jpg');
+    position: absolute;
+    z-index: 1;
     min-width: 100%;
     min-height: 415px;
 
     @media (min-width: $ds){
-      min-width: 60%;
+      min-width: max-content;
       min-height: 596px;
+      top: 23px;
     }
   }
 
   &__title {
-    border-bottom: 1px solid $basic-primary;
-    padding-bottom: 10px;
     @media (min-width: $ds){
-      border-bottom: none;
+      padding-bottom: 4px;
+      padding-left: 5px;
+      position: relative;
+      margin-bottom: 56px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 175px;
+        height: 3px;
+        bottom: -27px;
+        left: 5px;
+        background-color: $basic-primary;
+      }
     }
+  }
+
+  &__btn {
+    @media (min-width: $ds){
+      width: 250px;
+      height: 76px;
+      margin-left: 5px;
+    }
+  }
+
+  @media (min-width: $ds){
+    margin-bottom: 233px;
   }
 }
 
@@ -168,6 +247,7 @@
 
   &__image {
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 16px;
   }
 }
+

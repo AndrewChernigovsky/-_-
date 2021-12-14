@@ -1,0 +1,31 @@
+.modal {
+  display: none;
+  position: fixed;
+  top: 100px;
+  min-width: 100%;
+
+  &__wrapper{
+    display: flex;
+  }
+
+  &__image {
+    background-image: url('../image/content/popup-costTour.jpg');
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    flex-basis: 50%;
+  }
+
+  &__form {
+    min-width: 280px;
+    max-width: 500px;
+    background-color: $white;
+    padding: 0 20px;
+    flex-basis: 50%;
+  }
+
+  &__data {
+    flex-direction: column;
+  }
+}
