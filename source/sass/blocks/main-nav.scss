@@ -254,3 +254,9 @@
 .main-nav__item--active a {
   color: $basic-primary;
 }
+
+.main-nav__phone {
+  a svg {
+    stroke: $black;
+  }
+}

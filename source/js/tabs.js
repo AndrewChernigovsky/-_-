@@ -84,17 +84,14 @@ function swipeTour(){
   bodyWrapperTours.style.width = width * contentTours.length + 'px';
 
   contentTours.forEach(item => {
-    // item.style.width = width +'px';
-    // item.style.height = 'auto';
-
-    item.width = window.innerWidth;
-    item.height = window.innerHeight;
+    item.style.width = width +'px';
+    item.style.height = 'auto';
   });
 
   SwipeAnimate();
   window.addEventListener('resize', swipeTour);
 }
 
- function SwipeAnimate() {
+function SwipeAnimate() {
   bodyWrapperTours.style.transform = 'translate(-' + count * width + 'px)';
 }

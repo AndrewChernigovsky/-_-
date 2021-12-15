@@ -86,12 +86,7 @@
   width: inherit;
   height: 100%;
   background-color: $basic-sixa5;
-  z-index: 2;
-
-  &:hover {
-    opacity: 1;
-    transition: 0.7s ease-in-out;
-  }
+  z-index: 20;
 }
 
 .place {
@@ -142,34 +137,37 @@
     bottom: 0;
   }
 
-  &:hover .overlay {
-    display: block;
-    background-color: $basic-sixa5;
-    transition: 0.7s ease-in-out;
-  }
-
-  &:hover .link-about {
-    border: 1px solid $lightWhite;
-    width: 266px;
-    height: 55px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    cursor: pointer;
-    z-index: 3;
-    opacity: 1;
-    transition: 0.7s ease-in-out;
-  }
-
   &__wrapper {
     min-width: 300px;
+    min-height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     @media (min-width: $ds) {
       min-width: 350px;
     }
+  }
+}
+
+
+.place__wrapper:hover {
+    .overlay {
+      opacity: 1;
+      display: block;
+      transition: 0.7s ease-in-out;
+      position: absolute;
+      z-index: 1;
+    }
+
+    .link-about {
+      opacity: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.7s ease-in-out;
+      position: absolute;
+      z-index: 3;
   }
 }
