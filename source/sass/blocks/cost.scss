@@ -25,9 +25,9 @@
 
   }
 
-  &__item{
-   &:nth-child(n){
-    margin-bottom: 30px;
+  &__item {
+    &:nth-child(n){
+      margin-bottom: 30px;
 
     @media (min-width:$tb){
       margin-bottom: auto;

@@ -104,9 +104,21 @@
     padding: 16px;
     padding-left: 51px;
     position: relative;
+    border: none;
+    outline: 1px solid $basic-six;
 
     &::placeholder{
       color: $basic-six;
+    }
+
+    &:invalid {
+      border: none;
+      outline: 1px solid red;
+    }
+
+    &:valid {
+      border: none;
+      outline: 1px solid greenyellow;
     }
 
     @media (min-width: $ds) {
@@ -124,9 +136,21 @@
   &__email {
     padding: 16px;
     padding-right: 51px;
+    border: none;
+    outline: 1px solid $basic-six;
 
     &::placeholder{
       color: $basic-six;
+    }
+
+    &:invalid {
+      border: none;
+      outline: 1px solid red;
+    }
+
+    &:valid {
+      border: none;
+      outline: 1px solid greenyellow;
     }
 
     @media (min-width: $ds) {

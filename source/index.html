@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="en">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,7 +15,7 @@
       <div class="main-header__inner container">
         <div class="logo">
           <a class="logo-link" href="index.html">
-            <svg role="img" class="logo" width="57" height="22" aria-label="logotype" alt="логотип">
+            <svg role="img" class="logo" width="57" height="22" aria-label="logotype">
               <use xlink:href="image/sprite.svg#logo"></use>
             </svg>
           </a>
@@ -35,7 +35,7 @@
             </ul>
             <div class="main-nav__phone phone-wrapper">
               <a class="phone-link phone font-secondary" href="tel:++749978468446">
-                <svg role="img" class="phone" width="35" height="25" aria-label="phone" alt="phone">
+                <svg role="img" class="phone" width="35" height="25" aria-label="phone">
                   <use xlink:href="image/sprite.svg#phone"></use>
                 </svg>
                 <span>
@@ -51,7 +51,7 @@
           <div class="offer-inner">
             <h1 class="main-title font-fifth">Путешествие по Европе</h1>
             <p class="main-subtitle font-third">В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.</p>
-            <a class="link offer-tour__link font-fourfh">смотреть тур</a>
+            <a class="link offer-tour__link font-fourfh" href="#aboutTours">смотреть тур</a>
           </div>
         </div>
       </div>
@@ -67,7 +67,7 @@
         <div class="place">
           <div class="place__wrapper">
             <div class="overlay"></div>
-            <a href="#aboutTours">
+            <a class="place__link" href="#aboutTours">
               <picture>
                 <source type="image/webp" media="(min-width: 1024px)" srcset="image/content/grecia.webp 1x, image/content/grecia@2x.webp 2x">
                 <source type="image/webp" media="(min-width: 768px)" srcset="image/content/grecia-tb.webp 1x, image/content/grecia-tb@2x.webp 2x">
@@ -331,7 +331,7 @@
           <p class="price__contacts font-contacts">Свяжитесь с нами</p>
           <div class="price__contacts-phone">
             <a class="phone-link phone font-secondary" href="tel:++749978468446">
-              <svg role="img" class="phone" width="35" height="25" aria-label="phone" alt="phone">
+              <svg role="img" class="phone" width="35" height="25" aria-label="phone">
                 <use xlink:href="image/sprite.svg#phone"></use>
               </svg>
               <span>
@@ -342,6 +342,7 @@
         </div>
       </section>
       <section class="cost__item price-complex">
+        <h2 class="visually-hidden">Цена комплексная</h2>
         <div class="price-complex__wrapper">
           <div class="price-complex__offer">
             <div class="price-complex__offer-title">
@@ -366,6 +367,7 @@
         </div>
       </section>
       <section class="cost__item price-econom">
+        <h2 class="visually-hidden">Цена экономная</h2>
         <div class="price-econom__wrapper">
           <div class="price-econom__offer">
             <div class="price-econom__offer-title">
@@ -443,7 +445,7 @@
           <h3 class="main-footer__contacts-title font-lastTitle">Наши контакты</h3>
           <div class="main-footer__phone-wrapper">
             <a class="phone-email phone-link phone-footer font-contactEmail" href="mailto:puteshestviemechta@gmail.ru">
-              <svg role="img" class="email" width="18" height="18" aria-label="email" alt="email">
+              <svg role="img" class="email" width="18" height="18" aria-label="email">
                 <use xlink:href="image/sprite.svg#email"></use>
               </svg>
               <span>
@@ -451,7 +453,7 @@
               </span>
             </a>
             <a class="phone-link phone-footer font-secondary" href="tel:++749978468446">
-              <svg role="img" class="phone" width="18" height="18" aria-label="phone" alt="phone">
+              <svg role="img" class="phone" width="18" height="18" aria-label="phone">
                 <use xlink:href="image/sprite.svg#phone"></use>
               </svg>
               <span>
@@ -470,7 +472,7 @@
   <div class="modal" id="modal-formFeedBack">
     <div class="modal__wrapper">
       <div class="modal__image"></div>
-      <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru">
+      <form class="modal__form" method="POST" action="https://echo.htmlacademy.ru" id="formFeedBackData">
         <div class="formFeedBack__form-wrapper">
           <button class="formFeedBack__form-toggle" type="button">
             <span class="btn-close" id="btnModalFormClose">Закрыть</span>
@@ -479,15 +481,18 @@
           <p class="font-callnwrite">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
           <fieldset class="modal__data data-formFB">
             <label for="phone"></label>
-            <input class="data-formFB__phone" type="tel" id="phone" placeholder="Введите 10 цифр номера" aria-label="Введите phone" required>
+            <input class="data-formFB__phone" type="number" id="dataFormFBphone" placeholder="Введите 10 цифр номера" aria-label="Введите phone" max="10" min="10" required>
             <label for="email"></label>
-            <input class="data-formFB__email" type="email" id="email" placeholder="E-mail" aria-label="Введите email" required>
+            <input class="data-formFB__email" type="email" id="dataFormFBemail" placeholder="E-mail" aria-label="Введите email" required>
           </fieldset>
-          <button class="btn font-fourfh" type="submit">отправить</button>
+          <button class="btn font-fourfh" type="submit" id="dataFormFBbtn">отправить</button>
         </div>
       </form>
     </div>
   </div>
+
+  <div class="error"></div>
+  <div class="success"></div>
 
   <template id="success">
     <div class="success">
@@ -502,6 +507,7 @@
     </div>
   </template>
 
+  <script src="js/Formsubmit.js"></script>
   <script src="js/menu.js"></script>
   <script src="js/modal-form.js"></script>
   <script src="js/tabs.js"></script>
